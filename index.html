@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<body style="background-color: rgb(6, 21, 34);">
+    <div style="display: flex; justify-content: center;align-items: center;margin-top:4em;">
+    <div id="book">
+    </div>
+    </div>
+</body>
+
+<script src="page-flip.browser.js"></script>
+<script>
+    const pageFlip = new St.PageFlip(document.getElementById('book'), {
+        width: 600, // required parameter - base page width
+        height: 800, // required parameter - base page height
+        flippingTime: 700
+    });
+
+    pageFlip.loadFromImages(['0.jpg','1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg',]);
+</script>
+
+</html>
