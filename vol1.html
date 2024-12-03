@@ -8,10 +8,12 @@
 </head>
 
 <body style="background-color: rgb(0, 10, 20);display:grid;flex-direction:column;justify-content:center;">
+    <div class="label">Pinch Zoom Here</div>
     <div id="wrapper">
         <div id="book">
         </div>
     </div>
+    <div class="label">Pinch Zoom Here</div>
 </body>
 
 <script src="page-flip.browser.js"></script>
@@ -34,11 +36,17 @@
 </script>
 
 <style>
+    .label{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        color:white;
+    }
     #wrapper {
         background-color: rgb(0, 10, 20);
         height:85%;
         width:85%;
-        margin-top:6em;
+        margin-top:3em;
         margin-top:6em;
         margin-left:2em;
         margin-right:2em;
