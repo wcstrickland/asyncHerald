@@ -7,27 +7,26 @@
     <title>Async</title>
 </head>
 
-<body style="background-color: rgb(0, 10, 20);display:flex;justify-content: center;align-items: center;">
-    <div style="display: flex;height: 90%;width: 90%; ">
-    <div id="book">
-    </div>
+<body style="background-color: rgb(20, 20, 28)">
+    <div id="issue-grid">
+        <a  href="vol1.html"><img class="cover" src="1/1.jpg"></a>
+        <a  href="#"><img class="cover" src="soon.jpg"></a>
     </div>
 </body>
 
-<script src="page-flip.browser.js"></script>
-<script>
-    var screenWidth = window.screen.width;
-    var screenHeight = window.screen.height;
-    const pageFlip = new St.PageFlip(document.getElementById('book'), {
-        width: 400, // required parameter - base page width
-        height: 600, // required parameter - base page height
-        minWidth: 200, // required parameter - base page width
-        minHeight: 400, // required parameter - base page height
-        size: "stretch",
-        flippingTime: 700
-    });
-
-    pageFlip.loadFromImages(['filler.jpg','1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg',]);
-</script>
+<style>
+    #issue-grid {
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin:2em;
+    }
+    .cover {
+       /* width: 638px;
+       height: 825px; */
+       max-width:80%;
+       max-height:80%;
+    }
+</style>
 
 </html>
