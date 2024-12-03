@@ -9,8 +9,13 @@
 
 <body style="background-color: rgb(20, 20, 28)">
     <div id="issue-grid">
-        <a class="issue"  href="vol1.html"><img class="cover" src="1/1.jpg"></a>
-        <a class="issue" href="#"><img class="cover" src="soon.jpg"></a>
+        <div class="section">
+            <a class="issue" href="vol1.html"><img class="cover" src="1/1.jpg"></a>
+            <a class="button" href="1/vol1.pdf" download="async-herald-vol1">Download PDF</a>
+        </div>
+        <div>
+            <a class="issue" href="#"><img class="cover" src="soon.jpg"></a>
+        </div>
     </div>
 </body>
 
@@ -19,17 +24,38 @@
         display: grid;
         grid-gap: .5rem;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        margin:2em;
+        margin: 2em;
     }
-    .issue{
+
+    .button {
+        font: bold 11px Arial;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        border-left: 1px solid #CCCCCC;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .issue {
         display: grid;
         place-items: center;
     }
+
     .cover {
-       /* width: 638px;
+        /* width: 638px;
        height: 825px; */
-       max-width:80%;
-       max-height:80%;
+        max-width: 90%;
+        max-height: 90%;
     }
 </style>
 
