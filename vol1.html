@@ -7,7 +7,7 @@
     <title>Async</title>
 </head>
 
-<body style="background-color: rgb(0, 10, 20);display:grid;flex-direction:column;justify-content:center;">
+<body style="background-color: rgb(0, 10, 20);">
     <div class="label">Pinch Zoom Here</div>
     <div id="wrapper">
         <div id="book">
@@ -20,8 +20,14 @@
 <script>
     var screenWidth = window.screen.width;
     var screenHeight = window.screen.height;
-    var minWidth = 197*3.5
-    var minHeight = 256*3.5
+    var minWidth = 197 * 3.5
+    var minHeight = 256 * 3.5
+    // if (screenWidth < 400) {
+    //     minWidth = 197
+    // }
+    // if (screenHeight < 900) {
+    //     minHeight = 256
+    // }
     const pageFlip = new St.PageFlip(document.getElementById('book'), {
         width: 197, // required parameter - base page width
         height: 256, // required parameter - base page height
@@ -36,26 +42,23 @@
 </script>
 
 <style>
-    .label{
+    .label {
         display: flex;
-        justify-content:center;
-        align-items:center;
-        color:white;
+        justify-content: left;
+        align-items: center;
+        color: white;
     }
+
     #wrapper {
         background-color: rgb(0, 10, 20);
-        height:85%;
-        width:85%;
-        margin-top:3em;
-        margin-top:6em;
-        margin-left:2em;
-        margin-right:2em;
+        /* height: 85%;
+        width: 85%; */
+        margin-top: 3em;
+        margin-top: 6em;
     }
 
     #book {
         background-color: rgb(0, 10, 20);
-        margin-left:2em;
-        margin-right:2em;
     }
 </style>
 
