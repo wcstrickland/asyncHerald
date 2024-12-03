@@ -18,11 +18,13 @@
 <script>
     var screenWidth = window.screen.width;
     var screenHeight = window.screen.height;
+    var minWidth = 197*4
+    var minHeight = 256*4
     const pageFlip = new St.PageFlip(document.getElementById('book'), {
         width: 197, // required parameter - base page width
         height: 256, // required parameter - base page height
-        minWidth: 340, // required parameter - base page width
-        minHeight: 445, // required parameter - base page height
+        minWidth: minWidth, // required parameter - base page width
+        minHeight: minHeight, // required parameter - base page height
         size: "stretch",
 
         flippingTime: 700

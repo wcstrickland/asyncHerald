@@ -9,8 +9,8 @@
 
 <body style="background-color: rgb(20, 20, 28)">
     <div id="issue-grid">
-        <a  href="vol1.html"><img class="cover" src="1/1.jpg"></a>
-        <a  href="#"><img class="cover" src="soon.jpg"></a>
+        <a class="issue"  href="vol1.html"><img class="cover" src="1/1.jpg"></a>
+        <a class="issue" href="#"><img class="cover" src="soon.jpg"></a>
     </div>
 </body>
 
@@ -20,6 +20,10 @@
         grid-gap: .5rem;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         margin:2em;
+    }
+    .issue{
+        display: grid;
+        place-items: center;
     }
     .cover {
        /* width: 638px;
