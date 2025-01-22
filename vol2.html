@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5 user-scalable=yes">
+    <title>Async</title>
+</head>
+
+<body style="background-color: rgb(0, 10, 20);">
+    <div class="label">Pinch Zoom Here</div>
+    <div id="wrapper">
+        <div id="book">
+        </div>
+    </div>
+    <div class="label">Pinch Zoom Here</div>
+    <a class="button" href="vol2.pdf" download="vol2">Download PDF</a>
+</body>
+
+<script src="page-flip.browser.js"></script>
+<script>
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    var minWidth = 197 * 3.5
+    var minHeight = 256 * 3.5
+    // if (screenWidth < 400) {
+    //     minWidth = 197
+    // }
+    // if (screenHeight < 900) {
+    //     minHeight = 256
+    // }
+    const pageFlip = new St.PageFlip(document.getElementById('book'), {
+        width: 197, // required parameter - base page width
+        height: 256, // required parameter - base page height
+        minWidth: minWidth, // required parameter - base page width
+        minHeight: minHeight, // required parameter - base page height
+        size: "stretch",
+
+        flippingTime: 700
+    });
+
+    pageFlip.loadFromImages(['2-1.png', '2-2.png', '2-3.png', '2-4.png', '2-5.png', '2-6.png', '2-7.png', '2-8.png', '2-9.png', '2-10.png', '2-11.png', '2-12.png', '2-13.png', '2-14.png', '2-15.png', '2-16.png', '2-17.png','2-18.png','2-19.png', '2-20.png', '2-21.png','2-22.png','2-23.png','2-24.png' ]);
+</script>
+
+<style>
+    .label {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: white;
+    }
+
+    .button {
+        font: bold 11px Arial;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        border-left: 1px solid #CCCCCC;
+    }
+
+    #wrapper {
+        background-color: rgb(0, 10, 20);
+        /* height: 85%;
+        width: 85%; */
+        margin-top: 3em;
+        margin-top: 6em;
+    }
+
+    #book {
+        background-color: rgb(0, 10, 20);
+    }
+</style>
+
+</html>
